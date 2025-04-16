@@ -1,0 +1,27 @@
+{
+  "name": "𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃",
+  "description": "𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 Whatsapp Multidevice Bot",
+  "logo": "https://i.ibb.co/JFmPY6Pz/SulaMd.jpg",
+  "keywords": ["bot / 𝐀𝐒𝐇𝐈𝐘𝐀"],
+  "success_url": "/",
+
+  "env": {
+    "SESSION_ID": {
+      "description": "Put the session-id here.",
+      "required": true
+    },
+
+    
+    "MONGODB": {
+      "description": "Put the mongodb url here.",
+      "required": true
+    }
+},
+
+     "buildpacks": [
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+        }
+     ],
+  "stack": "heroku-24"
+}
