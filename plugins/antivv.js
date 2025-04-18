@@ -1,64 +1,61 @@
-const { cmd } = require("../command");
+/*
+Dont Remove Credit;
+        CREDIT BY 𝐒𝐔𝐋𝐀-𝐌𝐃 OWNER SULAKSHA MADARA 
+        SUPPORT - https://whatsapp.com/channel/0029Vb65iOZKwqSNKecV8V07
+        
+ Credit Remove කරන්න තරම් තිරිසනෙක් වෙන්න එපා ඕයි ☹️
+*/
+
+const axios = require('axios');
+const config = require('../config');
+const { cmd, commands } = require('../command');
+
+const fs = require("fs");
 
 cmd({
-  pattern: "vv",
-  alias: ["viewonce", 'retrive'],
-  react: '👾',
-  desc: "Owner Only - retrieve quoted message back to user",
-  category: "owner",
-  filename: __filename
-}, async (client, message, match, { from, isOwner }) => {
-  try {
-    if (!isOwner) {
-      return await client.sendMessage(from, {
-        text: "*📛 This is an owner command.*"
-      }, { quoted: message });
+    pattern: "vv",
+    react: "🖕",
+    alias: ["retrive", "viewonce"],
+    desc: "Fetch and resend a ViewOnce message content (image/video/voice).",
+    category: "misc",
+    use: "<query>",
+    filename: __filename
+}, async (conn, mek, m, { from, reply }) => {
+    try {
+        if (!m.quoted) return reply("Please reply to a ViewOnce message.");
+
+        const mime = m.quoted.type;
+        let ext, mediaType;
+        
+        if (mime === "imageMessage") {
+            ext = "jpg";
+            mediaType = "image";
+        } else if (mime === "videoMessage") {
+            ext = "mp4";
+            mediaType = "video";
+        } else if (mime === "audioMessage") {
+            ext = "mp3";
+            mediaType = "audio";
+        } else {
+            return reply("Unsupported media type. Please reply to an image, video, or audio message.");
+        }
+
+        var buffer = await m.quoted.download();
+        var filePath = `${Date.now()}.${ext}`;
+
+        fs.writeFileSync(filePath, buffer); 
+
+        let mediaObj = {};
+        mediaObj[mediaType] = fs.readFileSync(filePath);
+
+        await conn.sendMessage(m.chat, mediaObj);
+
+        fs.unlinkSync(filePath);
+
+    } catch (e) {
+        console.log("Error:", e);
+        reply("An error occurred while fetching the ViewOnce message.", e);
     }
-
-    if (!match.quoted) {
-      return await client.sendMessage(from, {
-        text: "*🍁 Please reply to a view once message!*"
-      }, { quoted: message });
-    }
-
-    const buffer = await match.quoted.download();
-    const mtype = match.quoted.mtype;
-    const options = { quoted: message };
-
-    let messageContent = {};
-    switch (mtype) {
-      case "imageMessage":
-        messageContent = {
-          image: buffer,
-          caption: match.quoted.text || '',
-          mimetype: match.quoted.mimetype || "image/jpeg"
-        };
-        break;
-      case "videoMessage":
-        messageContent = {
-          video: buffer,
-          caption: match.quoted.text || '',
-          mimetype: match.quoted.mimetype || "video/mp4"
-        };
-        break;
-      case "audioMessage":
-        messageContent = {
-          audio: buffer,
-          mimetype: "audio/mp4",
-          ptt: match.quoted.ptt || false
-        };
-        break;
-      default:
-        return await client.sendMessage(from, {
-          text: "❌ Only image, video, and audio messages are supported"
-        }, { quoted: message });
-    }
-
-    await client.sendMessage(from, messageContent, options);
-  } catch (error) {
-    console.error("vv Error:", error);
-    await client.sendMessage(from, {
-      text: "❌ Error fetching vv message:\n" + error.message
-    }, { quoted: message });
-  }
 });
+
+/*Plugin වටේ යවන්න එපා ඈ*/
