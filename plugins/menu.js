@@ -23,16 +23,16 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
 ╰━━━━∙⋆⋅⋆∙━ ─┉─ • ─┉─⊷
 
   *╭────────────●●►*
-  *│1. DOWNLOAD MENU*
-  *│2. SEARCH MENU* 
-  *│3. AI MENU*
-  *│4. OWNER MENU*
-  *│5. GROUP MENU*
-  *│6. INFO MENU*
-  *│7. CONVERTER MENU*
-  *│8. RANDOM MENU*
-  *│9. WALLPAPERS MENU*
-  *│10. OTHER MENU*
+  *│1. DOWNLOAD MENU*📥
+  *│2. SEARCH MENU*📚 
+  *│3. AI MENU*🤖
+  *│4. OWNER MENU*🥷
+  *│5. GROUP MENU*🌬️
+  *│6. INFO MENU*🚀
+  *│7. CONVERTER MENU*🪂
+  *│8. RANDOM MENU*🪀
+  *│9. WALLPAPERS MENU*🌠
+  *│10. OTHER MENU*📝
   *╰────────────●●►*
 
 > 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃
