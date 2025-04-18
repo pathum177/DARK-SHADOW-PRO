@@ -37,6 +37,13 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
 
 > 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃
 `;
+        await conn.sendMessage(from, {
+        video: {
+            url: 'https://github.com/kumara1976/kumara-md/blob/main/VID-20250418-WA0224.mp4?raw=true'
+        },
+        mimetype: 'video/mp4',
+        ptv: true
+        }, { quoted: mek });
 
         const sentMsg = await conn.sendMessage(from, {
             image: { url: imageUrl },
