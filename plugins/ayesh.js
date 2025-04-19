@@ -33,7 +33,7 @@ let desc = `
 
 > *_bot-owner 🥺👇_*
 
-`https://wa.me/+94760746437?text=*Hy_AYESH-𝐌𝐃_😌💗_*`
+https://wa.me/+94760746437?text=*Hy_AYESH-𝐌𝐃_😌💗_*
 
 > 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥺❤‍🩹
 `
