@@ -10,7 +10,7 @@ cmd({
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
         const steps = [
-            '💻 *𝐀𝐒𝐇𝐈𝐘𝐀-MD HACK STARTING...* 💻',
+            '💻 *𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 HACK STARTING...* 💻',
             '',
             '*Initializing hacking tools...* 🛠️',
             '*Connecting to remote servers...* 🌐',
@@ -40,8 +40,16 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             '',
             ' *👨‍💻 YOUR DATA HACK SUCCESSFULLY 👩‍💻☣*',
             '',
-            '𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃'
+            '🄿🄾🅆🄴🅁🄳 🅱🆈 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 😈'
         ];
+        
+        await conn.sendMessage(from, {
+        video: {
+            url: 'https://github.com/sulamadara1147/data/blob/main/VID-20250416-WA0092.mp4?raw=true'
+        },
+        mimetype: 'video/mp4',
+        ptv: true
+    }, { quoted: mek });
 
         for (const line of steps) {
             await conn.sendMessage(from, { text: line }, { quoted: mek });
