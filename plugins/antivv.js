@@ -1,7 +1,7 @@
 /*
 Dont Remove Credit;
-        CREDIT BY 𝐒𝐔𝐋𝐀-𝐌𝐃 OWNER SULAKSHA MADARA 
-        SUPPORT - https://whatsapp.com/channel/0029Vb65iOZKwqSNKecV8V07
+        CREDIT BY 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 OWNER AYESH MADARA 
+        SUPPORT - https://whatsapp.com/channel/0029VbACpjVGJP8Pvuy1nC3T
         
  Credit Remove කරන්න තරම් තිරිසනෙක් වෙන්න එපා ඕයි ☹️
 */
