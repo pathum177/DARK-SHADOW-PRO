@@ -48,7 +48,7 @@ const msg = `
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
           newsletterName: '𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃',
-          newsletterJid: "120363385281017920@newsletter",
+          newsletterJid: "120363398661137791@newsletter",
           },
           externalAdReply: {
               title: `𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 Xvideo Downloader`,
