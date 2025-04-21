@@ -4,13 +4,13 @@ const config = require('../config');
 const {sleep} = require('../lib/functions')
 
 cmd({
-  pattern: "canvasbug",
+  pattern: "bug",
   use: ".canvasbug <@user> or <number>",
   category: "fun",
   desc: "Canvas Bug Function by Didula Rashmika",
   filename: __filename
 }, async (conn, m, mek, { args, reply }) => {
-  if (!args[0]) return await reply("*Reply to a user or provide a number!* (ex: .canvasbug 9471xxxxxxx)");
+  if (!args[0]) return await reply("*Reply to a user or provide a number!* (ex: .bug 9471xxxxxxx)");
 
   let target = args[0].replace(/[^0-9]/g, "") + "@s.whatsapp.net";
 
