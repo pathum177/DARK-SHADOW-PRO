@@ -26,36 +26,36 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
 > *❮➊.➍❯  Inbox Only__👤*
 ╭══════════════════════○
 ┣━ *❮➁❯ 𝗔𝗨𝗧𝗢 𝗩𝗢𝗜𝗖𝗘 🧠💨*
-> *❮➋.➊❯ Auto Voice 🔛*
-> *❮➋.➋❯ Auto Voice 🔐*
+> *❮➋.➊❯ Auto Voice__ON 🔛*
+> *❮➋.➋❯ Auto Voice__off 🔐*
 ╭══════════════════════○
 ┣━ *❮➂❯ 𝗔𝗨𝗧𝗢 𝗦𝗧𝗔𝗧𝗨𝗦 𝗦𝗘𝗘𝗡 🧠💨*
-> *❮➌.➊❯ Auto Read Status 🔛*
-> *❮➌.➋❯ Auto Read Status 🔐*
+> *❮➌.➊❯ Auto Read Status__ON 🔛*
+> *❮➌.➋❯ Auto Read Status__off 🔐*
 ╭══════════════════════○
 ┣━ *❮➃❯ 𝗔𝗨𝗧𝗢 𝗦𝗧𝗜𝗖𝗞𝗘𝗥 🧠💨*
-> *❮➍.➊❯ Auto sticker 🔛*
-> *❮➍.➋❯ Auto sticker 🔐*
+> *❮➍.➊❯ Auto sticker__ON 🔛*
+> *❮➍.➋❯ Auto sticker__off 🔐*
 ╭══════════════════════○
 ┣━ *❮➄❯ 𝗔𝗨𝗧𝗢 𝗥𝗘𝗣𝗟𝗬 🧠💨*
-> *❮➎.➊❯ Auto reply 🔛*
-> *❮➎.➋❯ Auto reply 🔐*
+> *❮➎.➊❯ Auto reply__ON 🔛*
+> *❮➎.➋❯ Auto reply__off 🔐*
 ╭══════════════════════○
 ┣━ *❮➅❯ 𝗕𝗢𝗧 𝗢𝗡𝗟𝗜𝗡𝗘 𝗢𝗙𝗙𝗟𝗜𝗡𝗘 🧠💨*
-> *❮➏.➊❯ Online 🔛*
-> *❮➏.➋❯ Online 🔐*
+> *❮➏.➊❯ Online__ON 🔛*
+> *❮➏.➋❯ Online__off 🔐*
 ╭══════════════════════○
 ┣━ *❮➆❯ 𝗠𝗦𝗚 𝗥𝗘𝗔𝗗 🧠💨*
-> *❮➐.➊❯ Read Msg 🔛*
-> *❮➐.➋❯ Read Msg 🔐*
+> *❮➐.➊❯ Read Msg__ON 🔛*
+> *❮➐.➋❯ Read Msg__off 🔐*
 ╭══════════════════════○
 ┣━ *❮➇❯ 𝗠𝗦𝗚 𝗥𝗘𝗔𝗖𝗧 🧠💨*
-> *❮➑.➊❯ Auto React 🔛*
-> *❮➑.➋❯ Auto React 🔐*
+> *❮➑.➊❯ Auto React__ON 🔛*
+> *❮➑.➋❯ Auto React__off 🔐*
 ╭══════════════════════○
 ┣━ *❮➈❯ 𝗔𝗡𝗧𝗜 𝗟𝗜𝗡𝗞 🧠💨*
-> *❮➒.➊❯ Anti Link 🔛*
-> *❮➒.➋❯ Anti Link 🔐*
+> *❮➒.➊❯ Anti Link__ON 🔛*
+> *❮➒.➋❯ Anti Link__off 🔐*
 > *❮➒.➌❯ Anti Link Remove ⛔*
 ╰═══════════════════════○
 
