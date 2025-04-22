@@ -134,15 +134,18 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
                     break;
                     case '9.1':    
                         reply(".update ANTI_LINK:true");
-                        reply(".update ANTI_LINKK:false");
                     break;
                     case '9.2':    
-                        reply(".update ANTI_LINKK:true");
                         reply(".update ANTI_LINK:false");
                     break;
                     case '9.3':    
-                        reply(".update ANTI_LINK:false");
-                        reply(".update ANTI_LINKK:false");
+                        reply(".update ANTI_LINK:fales");
+                    break;
+                    case '10.1':
+                        reply(".update AUTO_REACT_STATUS:true");
+                    break;
+                    case '10.2':
+                        reply(".update AUTO_REACT_STATUS:fales");
                     break;
                     default:
                         reply("Invalid option. Please select a valid option🔴");
