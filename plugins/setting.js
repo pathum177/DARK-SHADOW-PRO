@@ -15,7 +15,7 @@ cmd({
 async (conn, mek, m, { from, isOwner, quoted, reply }) => {
     if (!isOwner) return reply("❌ You are not the owner!");
     try {
-        let desc = `* _𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 𝑺𝑬𝑻𝑻𝑰𝑵𝑮𝑺_
+        let desc = `* _𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 𝑺𝑬𝑻𝑻𝑰𝑵𝑮𝑺....⚙️_
 
 
 ╭══════════════════════○
