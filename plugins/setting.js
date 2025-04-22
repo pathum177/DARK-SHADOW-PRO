@@ -19,44 +19,44 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
 
 
 ╭══════════════════════○
-┣━ *𝗪𝗢𝗥𝗞 𝗠𝗢𝗗𝗘 😈*
-> *1️⃣.1️⃣  Public Work*
-> *1️⃣.2️⃣  Private Work*
-> *1️⃣.3️⃣  Group Only*
-> *1️⃣.4️⃣  Inbox Only*
+┣━ *𝗪𝗢𝗥𝗞 𝗠𝗢𝗗𝗘 🧠💨*
+> *❮➊.➊❯  Public Work__🫂*
+> *❮➊.➋❯  Private Work__❗*
+> *❮➊.➌❯  Group Only__👥*
+> *❮➊.➍❯  Inbox Only__👤*
 ╭══════════════════════○
-┣━ *𝗔𝗨𝗧𝗢 𝗩𝗢𝗜𝗖𝗘 😈*
-> *2️⃣.1️⃣ Auto Voice On*
-> *2️⃣.2️⃣ Auto Voice Off*
+┣━ *𝗔𝗨𝗧𝗢 𝗩𝗢𝗜𝗖𝗘 🧠💨*
+> *❮➋.➊❯ Auto Voice 🔛*
+> *❮➋.➋❯ Auto Voice 🔐*
 ╭══════════════════════○
-┣━ *𝗔𝗨𝗧𝗢 𝗦𝗧𝗔𝗧𝗨𝗦 𝗦𝗘𝗘𝗡 😈*
-> *3️⃣.1️⃣ Auto Read Status On*
-> *3️⃣.2️⃣ Auto Read Status Off*
+┣━ *𝗔𝗨𝗧𝗢 𝗦𝗧𝗔𝗧𝗨𝗦 𝗦𝗘𝗘𝗡 🧠💨*
+> *❮➌.➊❯ Auto Read Status 🔛*
+> *❮➌.➋❯ Auto Read Status 🔐*
 ╭══════════════════════○
-┣━ *𝗔𝗨𝗧𝗢 𝗦𝗧𝗜𝗖𝗞𝗘𝗥 😈*
-> *4️⃣.1️⃣ Auto sticker On*
-> *4️⃣.2️⃣ Auto sticker Off*
+┣━ *𝗔𝗨𝗧𝗢 𝗦𝗧𝗜𝗖𝗞𝗘𝗥 🧠💨*
+> *❮➍.➊❯ Auto sticker 🔛*
+> *❮➍.➋❯ Auto sticker 🔐*
 ╭══════════════════════○
-┣━ *𝗔𝗨𝗧𝗢 𝗥𝗘𝗣𝗟𝗬😈*
-> *5️⃣.1️⃣ Auto reply On*
-> *5️⃣.2️⃣ Auto reply Off*
+┣━ *𝗔𝗨𝗧𝗢 𝗥𝗘𝗣𝗟𝗬 🧠💨*
+> *❮➎.➊❯ Auto reply 🔛*
+> *❮➎.➋❯ Auto reply 🔐*
 ╭══════════════════════○
-┣━ *𝗕𝗢𝗧 𝗢𝗡𝗟𝗜𝗡𝗘 𝗢𝗙𝗙𝗟𝗜𝗡𝗘 😈*
-> *6️⃣.1️⃣ Online On*
-> *6️⃣.2️⃣ Online Off*
+┣━ *𝗕𝗢𝗧 𝗢𝗡𝗟𝗜𝗡𝗘 𝗢𝗙𝗙𝗟𝗜𝗡𝗘 🧠💨*
+> *❮➏.➊❯ Online 🔛*
+> *❮➏.➋❯ Online 🔐*
 ╭══════════════════════○
-┣━ *𝗠𝗦𝗚 𝗥𝗘𝗔𝗗 😈*
-> *7️⃣.1️⃣ Read Msg On*
-> *7️⃣.2️⃣ Read Msg Off*
+┣━ *𝗠𝗦𝗚 𝗥𝗘𝗔𝗗 🧠💨*
+> *❮➐.➊❯ Read Msg 🔛*
+> *❮➐.➋❯ Read Msg 🔐*
 ╭══════════════════════○
-┣━ *𝗠𝗦𝗚 𝗥𝗘𝗔𝗖𝗧 😈*
-> *8️⃣.1️⃣ Auto React On*
-> *8️⃣.2️⃣ Auto React Off*
+┣━ *𝗠𝗦𝗚 𝗥𝗘𝗔𝗖𝗧 🧠💨*
+> *❮➑.➊❯ Auto React 🔛*
+> *❮➑.➋❯ Auto React 🔐*
 ╭══════════════════════○
-┣━ *𝗔𝗡𝗧𝗜 𝗟𝗜𝗡𝗞 😈*
-> *9️⃣.1️⃣ Anti Link On*
-> *9️⃣.2️⃣ Anti Link Off*
-> *9️⃣.3️⃣ Anti Link Remove*
+┣━ *𝗔𝗡𝗧𝗜 𝗟𝗜𝗡𝗞 🧠💨*
+> *❮➒.➊❯ Anti Link 🔛*
+> *❮➒.➋❯ Anti Link 🔐*
+> *❮➒.➌❯ Anti Link Remove ⛔*
 ╰═══════════════════════○
 
 
