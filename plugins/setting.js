@@ -58,9 +58,9 @@ async (conn, mek, m, { from, isOwner, quoted, reply }) => {
 > *❮➒.➋❯ Anti Link__off 🔐*
 > *❮➒.➌❯ Anti Link Remove ⛔*
 ╭══════════════════════○
-┣━ *𝗔𝗨𝗧𝗢 𝗦𝗧𝗔𝗧𝗨𝗦 𝗥𝗘𝗔𝗖𝗧 😈*
-> *1️⃣0️⃣.1️⃣ Anti Link On*
-> *1️⃣0️⃣.2️⃣ Anti Link Off*
+┣━ *❮➉❯ 𝗔𝗨𝗧𝗢 𝗦𝗧𝗔𝗧𝗨𝗦 𝗥𝗘𝗔𝗖𝗧 🧠💨*
+> *❮➓.➊❯ Anti Link__On 🔛*
+> *❮❿.➋❯ Anti Link__Off 🔐*
 ╰═══════════════════════○
 
 
