@@ -44,8 +44,8 @@ cmd({
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363385281017920@newsletter',
-                    newsletterName: "𝐒𝐔𝐋𝐀-𝐌𝐃",
+                    newsletterJid: '120363398661137791@newsletter',
+                    newsletterName: "𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃",
                     serverMessageId: 190
                 }
             }
