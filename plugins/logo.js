@@ -2,7 +2,7 @@ const { cmd, commands } = require("../command");
 const { fetchJson } = require("../lib/functions");
 
 cmd({
-    pattern: "logolist",
+    pattern: "logo",
     desc: "Create logos",
     category: "convert",
     filename: __filename
