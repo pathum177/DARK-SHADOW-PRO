@@ -72,7 +72,7 @@ cmd({
                 if (userResponse === "1") {
                     await conn.sendMessage(chatID, {
                         video: { url: videoData.video },
-                        caption: "> 🄿🄾🅆🄴🅁🄳 🅱🆈 𝐒𝐔𝐋𝐀_𝐌𝐃 😈"
+                        caption: "> 🄿🄾🅆🄴🅁🄳 🅱🆈 𝐀𝐒𝐇𝐈𝐘𝐀_𝐌𝐃 😈"
                     }, { quoted: receivedMessage });
                 } else if (userResponse === "2") {
                     await conn.sendMessage(chatID, {
