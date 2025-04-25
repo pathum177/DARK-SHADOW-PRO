@@ -62,6 +62,57 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
                         responseText = `
 *╭────❒⁠⁠⁠⁠* *📥 DOWNLOADER-MENU 📥* *❒⁠⁠⁠⁠* 
 *┋* *Coming Soon*
+*┋* *ytdl*
+*┋* *mp4*
+*┋* *video*
+*┋* *ytdl3*
+*┋* *play*
+*┋* *audio*
+*┋* *mp3*
+*┋* *song*
+*┋* *tiktok2*
+*┋* *ttdl2*
+*┋* *tiktokvid2*
+*┋* *ttdown2*
+*┋* *tt2*
+*┋* *tiktokdl2*
+*┋* *tweet*
+*┋* *twdl*
+*┋* *twitter*
+*┋* *mfire*
+*┋* *mediafire*
+*┋* *igdl*
+*┋* *reel*
+*┋* *ig*
+*┋* *instadl*
+*┋* *insta*
+*┋* *searchpin*
+*┋* *image*
+*┋* *img*
+*┋* *facebook*
+*┋* *fbdl*
+*┋* *fb*
+*┋* *apk*
+*┋* *ringtones*
+*┋* *ring*
+*┋* *ringtone*
+*┋* *instadl*
+*┋* *ig*
+*┋* *mediafire*
+*┋* *reel*
+*┋* *insta*
+*┋* *gdrive*
+*┋* *pin*
+*┋* *pindownload*
+*┋* *pins*
+*┋* *pinterestdl*
+*┋* *ytcommunity*
+*┋* *pindl*
+*┋* *ytpost*
+*┋* *tt*
+*┋* *tiktok*
+*┋* *gdrtiktokdlive*
+*┋* *ttdl*
 *╰───────────────────❒*
 
 > 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃
@@ -74,6 +125,16 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
 *┋* *tiktoksearch*
 *┋* *movie*
 *┋* *Coming Soon*
+*┋* *weather*
+*┋* *hirucheck*
+*┋* *news*
+*┋* *hirunews*
+*┋* *newshiru*
+*┋* *hirulk*
+*┋* *tiktoks*
+*┋* *tiks*
+*┋* *ttstalk*
+*┋* *tstalk*
 *╰───────────────────❒*
 
 > 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃
@@ -84,6 +145,17 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
 *╭────❒⁠⁠⁠⁠* *🧠 AI-MENU 🧠* *❒⁠⁠⁠⁠* 
 *┋* *ai*
 *┋* *Coming Soon*
+*┋* *openai*
+*┋* *chatgpt*
+*┋* *open-gpt*
+*┋* *deepseek*
+*┋* *bing*
+*┋* *gpt*
+*┋* *dj*
+*┋* *gpt3*
+*┋* *gpt4*
+*┋* *seekai*
+*┋* *deep*
 *╰───────────────────❒*
 
 > 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃
@@ -95,6 +167,19 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
 *┋* *update*
 *┋* *restart*
 *┋* *Coming Soon*
+*┋* *shutdown*
+*┋* *boom*
+*┋* *gjid*
+*┋* *hidetag*
+*┋* *clearchats*
+*┋* *unblock*
+*┋* *block*
+*┋* *setpp*
+*┋* *broadcast*
+*┋* *jid*
+*┋* *count*
+*┋* *setting*
+*┋* *settings*
 *╰───────────────────❒*
 
 > 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃
@@ -105,6 +190,18 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
 *╭────❒⁠⁠⁠⁠* *👥 GROUP-MENU 👥* *❒⁠⁠⁠⁠* 
 *┋* *kickall*
 *┋* *Coming Soon*
+*┋* *add*
+*┋* *shutdown*
+*┋* *hidetag*
+*┋* *gjid*
+*┋* *jid*
+*┋* *clearchats*
+*┋* *unblock*
+*┋* *block*
+*┋* *setpp*
+*┋* *broadcast*
+*┋* *Owner*
+*┋* *tagall*
 *╰───────────────────❒*
 
 > 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃
@@ -117,6 +214,13 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
 *┋* *menu*
 *┋* *ping*
 *┋* *Coming Soon*
+*┋* *update*
+*┋* *Owner*
+*┋* *date*
+*┋* *king*
+*┋* *status*
+*┋* *botinfo*
+*┋* *system*
 *╰───────────────────❒*
 
 > 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃
@@ -128,6 +232,15 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
 *┋* *tts2*
 *┋* *tourl*
 *┋* *Coming Soon*
+*┋* *tts2*
+*┋* *url*
+*┋* *img2url*
+*┋* *s*
+*┋* *stickergif*
+*┋* *sticker*
+*┋* *stake*
+*┋* *rename*
+*┋* *take*
 *╰───────────────────❒*
 
 > 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃
@@ -140,7 +253,16 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
 *┋* *weather*
 *┋* *news*
 *┋* *hirucheck*
-*┋* *Coming Soon*
+*┋* *Coming soon*
+*┋* *nikal*
+*┋* *hot*
+*┋* *confused*
+*┋* *moon*
+*┋* *shy*
+*┋* *sad*
+*┋* *angry*
+*┋* *heart*
+*┋* *happy*
 *╰───────────────────❒*
 
 > 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃
@@ -165,6 +287,17 @@ async (conn, mek, m, { from, quoted, pushname, reply }) => {
 *╭────❒⁠⁠⁠⁠* *🌐 OTHER-MENU 🌐* *❒⁠⁠⁠⁠* 
 *┋* *pair*
 *┋* *Coming Soon*
+*┋* *getpair*
+*┋* *clonebot*
+*┋* *logo*
+*┋* *calculate*
+*┋* *count*
+*┋* *countx*
+*┋* *shapar*
+*┋* *date*
+*┋* *calculate*
+*┋* *timenow*
+*┋* *rate*
 *╰───────────────────❒*
 
 > 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃
