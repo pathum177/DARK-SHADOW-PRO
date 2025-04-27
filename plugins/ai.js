@@ -1,90 +1,91 @@
 const { cmd } = require('../command');
 const axios = require('axios');
 
-cmd({
-    pattern: "openai",
-    alias: ["chatgpt", "gpt3", "open-gpt"],
-    desc: "Chat with OpenAI",
-    category: "ai",
-    react: "🧠",
-    filename: __filename
-},
-async (conn, mek, m, { from, args, q, reply, react }) => {
-    try {
-        if (!q) return reply("Please provide a message for OpenAI.\nExample: `.openai Hello`");
+// AI API වින්‍යාසය
+const AI_APIS = {
+  gpt: {
+    name: 'AI',
+    url: (query) => `https://lance-frank-asta.onrender.com/api/gpt?q=${encodeURIComponent(query)}`,
+    responseField: 'message',
+    react: '🤖',
+  },
+  openai: {
+    name: 'OpenAI',
+    url: (query) => `https://vapis.my.id/api/openai?q=${encodeURIComponent(query)}`,
+    responseField: 'result',
+    react: '🧠',
+  },
+  deepseek: {
+    name: 'DeepSeek AI',
+    url: (query) => `https://api.ryzendesu.vip/api/ai/deepseek?text=${encodeURIComponent(query)}`,
+    responseField: 'answer',
+    react: '🧠',
+  },
+};
 
-        const apiUrl = `https://vapis.my.id/api/openai?q=${encodeURIComponent(q)}`;
-        const { data } = await axios.get(apiUrl);
-
-        if (!data || !data.result) {
-            await react("❌");
-            return reply("OpenAI failed to respond. Please try again later.");
-        }
-
-        await reply(`🧠 *OpenAI Response:*\n\n${data.result}`);
-        await react("✅");
-    } catch (e) {
-        console.error("Error in OpenAI command:", e);
-        await react("❌");
-        reply("An error occurred while communicating with OpenAI.");
+// AI සමඟ චැට් කිරීමේ පොදු ෆන්ෂන්
+const chatWithAI = async (conn, mek, m, { from, q, reply, react }, aiConfig) => {
+  try {
+    // ආදාන වලංගුකරණය
+    if (!q) {
+      return reply(`💖 කරුණාකර ${aiConfig.name} සඳහා පණිවිඩයක් ලබාදෙන්න.\nඋදාහරණය: \`.${m.command} Hello\``);
     }
+    if (q.length > 500) {
+      return reply('❌ ආදානය ඉතා දිගුයි. කරුණාකර අක්ෂර 500ට අඩුවෙන් තබන්න.');
+    }
+
+    // සැකසීමේ රියැක්ෂන්
+    await react('⏳');
+
+    // API ඉල්ලීම කාලසීමාව සමඟ
+    const { data } = await axios.get(aiConfig.url(q), { timeout: 10000 });
+
+    // ප්‍රතිචාරය වලංගුදැයි පරීක්ෂා කිරීම
+    if (!data || !data[aiConfig.responseField]) {
+      await react('❌');
+      return reply(`${aiConfig.name} ප්‍රතිචාර දීමට අපොහොසත් විය. කරුණාකර පසුව උත්සාහ කරන්න. 😒`);
+    }
+
+    // ප්‍රතිචාරය යැ�ීම
+    await reply(`*${aiConfig.name} ප්‍රතිචාරය:*\n\n${data[aiConfig.responseField]}`);
+    await react('✅');
+  } catch (error) {
+    console.error(`දෝෂය ${aiConfig.name} විධානයේ:`, error.message);
+    await react('❌');
+    return reply(`${aiConfig.name} සමඟ සන්නිවේදනයේදී දෝෂයක් ඇතිවිය. කරුණාකර නැවත උත්සාහ කරන්න.`);
+  }
+};
+
+// විධාන නිර්වචන
+cmd({
+  pattern: 'a',
+  alias: ['bot', 'dj', 'gpt', 'gpt4', 'bing'],
+  desc: 'සාමාන්‍ය AI සමඟ චැට් කරන්න',
+  category: 'ai',
+  react: AI_APIS.gpt.react,
+  filename: __filename,
+}, async (conn, mek, m, { from, q, reply, react }) => {
+  await chatWithAI(conn, mek, m, { from, q, reply, react }, AI_APIS.gpt);
 });
 
 cmd({
-    pattern: "ai",
-    alias: ["bot", "dj", "gpt", "gpt4", "bing"],
-    desc: "Chat with an AI model",
-    category: "ai",
-    react: "🤖",
-    filename: __filename
-},
-async (conn, mek, m, { from, args, q, reply, react }) => {
-    try {
-        if (!q) return reply("Please provide a message for the AI.\nExample: `.ai Hello`");
-
-        const apiUrl = `https://lance-frank-asta.onrender.com/api/gpt?q=${encodeURIComponent(q)}`;
-        const { data } = await axios.get(apiUrl);
-
-        if (!data || !data.message) {
-            await react("❌");
-            return reply("AI failed to respond. Please try again later.");
-        }
-
-        await reply(`🤖 *AI Response:*\n\n${data.message}`);
-        await react("✅");
-    } catch (e) {
-        console.error("Error in AI command:", e);
-        await react("❌");
-        reply("An error occurred while communicating with the AI.");
-    }
+  pattern: 'openai',
+  alias: ['chatgpt', 'opengpt'],
+  desc: 'OpenAI සමඟ චැට් කරන්න',
+  category: 'ai',
+  react: AI_APIS.openai.react,
+  filename: __filename,
+}, async (conn, mek, m, { from, q, reply, react }) => {
+  await chatWithAI(conn, mek, m, { from, q, reply, react }, AI_APIS.openai);
 });
 
-
 cmd({
-    pattern: "deepseek",
-    alias: ["deep", "seekai"],
-    desc: "Chat with DeepSeek AI",
-    category: "ai",
-    react: "👾",
-    filename: __filename
-},
-async (conn, mek, m, { from, args, q, reply, react }) => {
-    try {
-        if (!q) return reply("Please provide a message for DeepSeek AI.\nExample: `.deepseek Hello`");
-
-        const apiUrl = `https://api.ryzendesu.vip/api/ai/deepseek?text=${encodeURIComponent(q)}`;
-        const { data } = await axios.get(apiUrl);
-
-        if (!data || !data.answer) {
-            await react("❌");
-            return reply("DeepSeek AI failed to respond. Please try again later.");
-        }
-
-        await reply(`👾 *DeepSeek AI Response:*\n\n${data.answer}`);
-        await react("✅");
-    } catch (e) {
-        console.error("Error in DeepSeek AI command:", e);
-        await react("❌");
-        reply("An error occurred while communicating with DeepSeek AI.");
-    }
+  pattern: 'deepseek',
+  alias: ['deep', 'seekai'],
+  desc: 'DeepSeek AI සමඟ චැට් කරන්න',
+  category: 'ai',
+  react: AI_APIS.deepseek.react,
+  filename: __filename,
+}, async (conn, mek, m, { from, q, reply, react }) => {
+  await chatWithAI(conn, mek, m, { from, q, reply, react }, AI_APIS.deepseek);
 });
