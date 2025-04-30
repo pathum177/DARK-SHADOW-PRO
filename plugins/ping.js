@@ -3,7 +3,7 @@ const { cmd, commands } = require('../command');
 
 const commandConfig = {
   pattern: "ping",
-  react: '📟',
+  react: '🇱🇰',
   alias: ["speed", "cyber_ping"],
   desc: "To Check bot's ping",
   category: "main",
@@ -17,17 +17,20 @@ cmd(commandConfig, async (bot, message, args, { from,l,quoted,body,isCmd,command
   try {
     var startTime = new Date().getTime();
     
-    const initialMessage = { text: "*_Pinging to 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 Module..._* ❗" };
+    const initialMessage = { text: "> *_𝐩𝐢𝐧𝐠𝐢𝐧𝐠 🆃🅾 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃_* ❗" };
     let sentMessage = await bot.sendMessage(from, initialMessage);
     
     var endTime = new Date().getTime();
     
     const loadingStages = [
-      "◍○○○○",
-      "◍◍○○○",
-      "◍◍◍○○",
-      "◍◍◍◍○",
-      "◍◍◍◍◍"
+      "□□□▢",
+      "▣▢▢▢",
+      "■□□▢",
+      "■▣□▢",
+      "■■□▢",
+      "■■▣▢",
+      "■■■▢",
+      "■■■■🔋",
     ];
     
     for (let stage of loadingStages) {
@@ -35,12 +38,12 @@ cmd(commandConfig, async (bot, message, args, { from,l,quoted,body,isCmd,command
     }
     
     return await bot.sendMessage(from, {
-      text: "📍️ *Pong " + (endTime - startTime) + " Ms 🍷🍂* ",
+      text: "📍️ *Pong " + (endTime - startTime) + " Ms 🍷🥷* ",
       edit: sentMessage.key
     });
 
   } catch (error) {
-    reply("*Error !!*");
+    reply("*E̳r̳r̳o̳r̳!!*");
     l(error);
   }
 });
