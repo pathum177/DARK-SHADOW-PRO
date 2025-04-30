@@ -1,22 +1,43 @@
-const config = require('../config');
-const { cmd, commands } = require('../command');
+const commandConfig = {
+  pattern: "ping",
+  react: '📟',
+  alias: ["speed", "cyber_ping"],
+  desc: "To Check bot's ping",
+  category: "main",
+  use: ".ping",
+  filename: __filename
+};
 
-cmd({
-    pattern: "ping",
-    desc: "Check bot's response time.",
-    category: "main",
-    react: "🍂",
-    filename: __filename
-},
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-    try {
-        const startTime = Date.now()
-        const message = await conn.sendMessage(from, { text: '> *PINGING...*' })
-        const endTime = Date.now()
-        const ping = endTime - startTime
-        await conn.sendMessage(from, { text: `> *🔥 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 SPEED : ${ping}ms 🌬️*` }, { quoted: message })
-    } catch (e) {
-        console.log(e)
-        reply(`${e}`)
+cmd(commandConfig, async (bot, message, args, { from,l,quoted,body,isCmd,command,argsArray,query,isGroup,sender,senderNumber,botNumber2,botNumber,pushname,isMe,isOwner,groupMetadata,groupName,participants,groupAdmins,isBotAdmins,isAdmins,
+  reply
+}) => {
+  try {
+    var startTime = new Date().getTime();
+    
+    const initialMessage = { text: "*_Pinging to Vajira Module..._* ❗" };
+    let sentMessage = await bot.sendMessage(from, initialMessage);
+    
+    var endTime = new Date().getTime();
+    
+    const loadingStages = [
+      "◍○○○○",
+      "◍◍○○○",
+      "◍◍◍○○",
+      "◍◍◍◍○",
+      "◍◍◍◍◍"
+    ];
+    
+    for (let stage of loadingStages) {
+      await bot.sendMessage(from, { text: stage, edit: sentMessage.key });
     }
-})
+    
+    return await bot.sendMessage(from, {
+      text: "📍️ *Pong " + (endTime - startTime) + " Ms* ",
+      edit: sentMessage.key
+    });
+
+  } catch (error) {
+    reply("*Error !!*");
+    l(error);
+  }
+});
