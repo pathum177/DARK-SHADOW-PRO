@@ -17,7 +17,7 @@ cmd(commandConfig, async (bot, message, args, { from,l,quoted,body,isCmd,command
   try {
     var startTime = new Date().getTime();
     
-    const initialMessage = { text: "> *_𝐩𝐢𝐧𝐠𝐢𝐧𝐠 🆃🅾 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃_* ❗" };
+    const initialMessage = { text: "> *_𝐩𝐢𝐧𝐠𝐢𝐧𝐠 🆃🅾 𝐀𝐒𝐇𝐈𝐘𝐀_𝐌𝐃.._* ❗" };
     let sentMessage = await bot.sendMessage(from, initialMessage);
     
     var endTime = new Date().getTime();
