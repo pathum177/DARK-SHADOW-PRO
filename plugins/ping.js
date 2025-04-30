@@ -1,4 +1,7 @@
+const config = require('../config');
+const { cmd, commands } = require('../command');
 const commandConfig = {
+ 
   pattern: "ping",
   react: '📟',
   alias: ["speed", "cyber_ping"],
