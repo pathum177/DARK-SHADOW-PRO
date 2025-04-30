@@ -14,7 +14,7 @@ cmd(commandConfig, async (bot, message, args, { from,l,quoted,body,isCmd,command
   try {
     var startTime = new Date().getTime();
     
-    const initialMessage = { text: "*_Pinging to Vajira Module..._* ❗" };
+    const initialMessage = { text: "*_Pinging to 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 Module..._* ❗" };
     let sentMessage = await bot.sendMessage(from, initialMessage);
     
     var endTime = new Date().getTime();
@@ -32,7 +32,7 @@ cmd(commandConfig, async (bot, message, args, { from,l,quoted,body,isCmd,command
     }
     
     return await bot.sendMessage(from, {
-      text: "📍️ *Pong " + (endTime - startTime) + " Ms* ",
+      text: "📍️ *Pong " + (endTime - startTime) + " Ms 🍂* ",
       edit: sentMessage.key
     });
 
