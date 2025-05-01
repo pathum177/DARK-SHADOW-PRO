@@ -30,7 +30,7 @@ cmd(commandConfig, async (bot, message, args, { from,l,quoted,body,isCmd,command
       "■■□▢",
       "■■▣▢",
       "■■■▢",
-      "■■■■🔋",
+      "■■■■🔋"
     ];
     
     for (let stage of loadingStages) {
