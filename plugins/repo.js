@@ -33,7 +33,7 @@ cmd({
 `;
 
         return await conn.sendMessage(from, { 
-            image: { url: "https://files.catbox.moe/2g0bq2.jpg" },
+            image: { url: "https://files.catbox.moe/x6i10c.jpg" },
             caption: repolink,contextInfo: {
                 forwardingScore: 999,
                 isForwarded: true,
