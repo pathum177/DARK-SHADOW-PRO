@@ -44,7 +44,7 @@ try{
    🄿🄾🅆🄴🅁🄳 🅱🆈  😈 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 `
     
 
-    return await conn.sendMessage(from,{image:{url:`https://files.catbox.moe/2g0bq2.jpg`},caption:about, 
+    return await conn.sendMessage(from,{image:{url:`https://files.catbox.moe/553zxh.jpg`},caption:about, 
         contextInfo: {
     mentionedJid: [m.sender],
     forwardingScore: 999,
