@@ -38,7 +38,7 @@ https://wa.me/+94760746437?text=*Hy_AYESH-𝐌𝐃_😌💗_*
 > 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥺❤‍🩹
 `
 
-return await conn.sendMessage(from,{image: {url: `https://files.catbox.moe/3szo6f.jpg`},caption: desc},{quoted: mek})
+return await conn.sendMessage(from,{image: {url: `https://files.catbox.moe/a5a1c0.jpg`},caption: desc},{quoted: mek})
 }catch(e){
 console.log(e)
 reply(`${e}`)
