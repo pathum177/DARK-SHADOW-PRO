@@ -9,7 +9,7 @@ const apilink = 'https://www.dark-yasiya-api.site/' // API LINK ( DO NOT CHANGE 
 
 cmd({
     pattern: "xv",
-    alias: ["xvdl","xvdown"],
+    alias: ["xxx","sex"],
     react: "🔞",
     desc: "Download xvideo.com porn video",
     category: "download",
@@ -35,7 +35,7 @@ const msg = `
 🥵 *Views* - ${xv_info.result.views}
 🥵 *Like* - ${xv_info.result.like}
 
-> 🄿🄾🅆🄴🅁🄳 🅱🆈 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 😈`
+> 🄿🄾🅆🄴🅁🄳 🅱🆈 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷`
 
 // Sending the image with caption
           const sentMsg = await conn.sendMessage(from, {
