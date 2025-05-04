@@ -39,7 +39,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 *╭┈───────────╴╴╴•⟢*
 *│*???????????????????*
 *╰┈───────────╴╴╴•⟢*
-> powerd by chethiya wedasiga / 𝐀𝐒𝐇𝐈𝐘𝐀_𝐌𝐃
+> *`𝗣𝗼𝘄𝗲𝗿𝗱 𝗯𝘆 𝐀𝐘𝐄𝐒𝐇 🥷🇱🇰`*
 
 
 `;
