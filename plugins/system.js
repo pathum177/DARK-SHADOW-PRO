@@ -13,12 +13,12 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 let status = `╭━━〔 *𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃* 〕━━┈⊷
-┃◈╭─────────────·๏
-┃◈┃• *⏳Uptime*: ${runtime(process.uptime())}
-┃◈┃• *📟 Ram*: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
-┃◈┃• *⚙️ Platform:-* ${os.hostname()}
-┃◈┃• *👨‍💻 Owner*: 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃
-┃◈└───────────┈⊷
+┃✯╭─────────────·๏
+┃✯┃• *⏳Uptime*: ${runtime(process.uptime())}
+┃✯┃• *📟 Ram*: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
+┃✯┃• *⚙️ Platform:-* ${os.hostname()}
+┃✯┃• *👨‍💻 Owner*: 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷
+┃✯└───────────┈⊷
 ╰──────────────┈⊷
 
 > *𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷🇱🇰*
