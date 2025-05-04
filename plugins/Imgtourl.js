@@ -1,65 +1,84 @@
 const axios = require("axios");
-const FormData = require("form-data");
-const fs = require("fs");
-const os = require("os");
+const FormData = require('form-data');
+const fs = require('fs');
+const os = require('os');
 const path = require("path");
-const { cmd } = require("../command");
+const { cmd, commands } = require("../command");
 
 cmd({
-  pattern: "tourl",
-  alias: ["imgtourl", "img2url", "url"],
-  react: "🖇",
-  desc: "Convert an image to a URL using ImgBB.",
-  category: "utility",
-  use: ".tourl (Reply to an image)",
-  filename: __filename
-}, async (conn, m, store, { from, quoted, reply, sender }) => {
+  'pattern': "tourl",
+  'alias': ["imgtourl", "imgurl", "url", "geturl", "upload"],
+  'react': '🚀',
+  'desc': "Convert media to Catbox URL",
+  'category': "utility",
+  'use': ".tourl [reply to media]",
+  'filename': __filename
+}, async (client, message, args, { reply }) => {
   try {
-    const targetMsg = quoted ? quoted : m;
-    const mimeType = (targetMsg.msg || targetMsg).mimetype || "";
-
-    if (!mimeType || !mimeType.startsWith("image")) {
-      return reply("❌ Please reply to an image.");
+    // Check if quoted message exists and has media
+    const quotedMsg = message.quoted ? message.quoted : message;
+    const mimeType = (quotedMsg.msg || quotedMsg).mimetype || '';
+    
+    if (!mimeType) {
+      throw "Please reply to an image, video, or audio file";
     }
 
-    reply("🔄 Uploading image...");
+    // Download the media
+    const mediaBuffer = await quotedMsg.download();
+    const tempFilePath = path.join(os.tmpdir(), `catbox_upload_${Date.now()}`);
+    fs.writeFileSync(tempFilePath, mediaBuffer);
 
-    const imageBuffer = await targetMsg.download();
-    const tempFilePath = path.join(os.tmpdir(), "temp_image.jpg");
-    fs.writeFileSync(tempFilePath, imageBuffer);
+    // Get file extension based on mime type
+    let extension = '';
+    if (mimeType.includes('image/jpeg')) extension = '.jpg';
+    else if (mimeType.includes('image/png')) extension = '.png';
+    else if (mimeType.includes('video')) extension = '.mp4';
+    else if (mimeType.includes('audio')) extension = '.mp3';
+    
+    const fileName = `file${extension}`;
 
-    const formData = new FormData();
-    formData.append("image", fs.createReadStream(tempFilePath));
+    // Prepare form data for Catbox
+    const form = new FormData();
+    form.append('fileToUpload', fs.createReadStream(tempFilePath), fileName);
+    form.append('reqtype', 'fileupload');
 
-    const { data } = await axios.post("https://api.imgbb.com/1/upload?key=e909ac2cc8d50250c08f176afef0e333", formData, {
-      headers: formData.getHeaders(),
+    // Upload to Catbox
+    const response = await axios.post("https://catbox.moe/user/api.php", form, {
+      headers: form.getHeaders()
     });
 
-    fs.unlinkSync(tempFilePath); // Delete temp file
-
-    if (!data || !data.data || !data.data.url) {
-      throw "❌ Failed to upload the image.";
+    if (!response.data) {
+      throw "Error uploading to Catbox";
     }
 
-    const imageUrl = data.data.url;
-    const msgContext = {
-      mentionedJid: [sender],
-      forwardingScore: 999,
-      isForwarded: true,
-      forwardedNewsletterMessageInfo: {
-        newsletterJid: "120363398661137791@newsletter",
-        newsletterName: "𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃",
-        serverMessageId: 143
-      }
-    };
+    const mediaUrl = response.data;
+    fs.unlinkSync(tempFilePath);
 
-    await conn.sendMessage(from, {
-      text: `✅ *Image Uploaded Successfully 📸*\n\n📏 *Size:* ${imageBuffer.length} Bytes\n\n🔗 *URL:* ${imageUrl}\n\n\n> 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃`,
-      contextInfo: msgContext
-    });
+    // Determine media type for response
+    let mediaType = 'File';
+    if (mimeType.includes('image')) mediaType = 'Image';
+    else if (mimeType.includes('video')) mediaType = 'Video';
+    else if (mimeType.includes('audio')) mediaType = 'Audio';
+
+    // Send response
+    await reply(
+      `*${mediaType} Uploaded Successfully*\n\n` +
+      `*Size:* ${formatBytes(mediaBuffer.length)}\n` +
+      `*URL:* ${mediaUrl}\n\n` +
+      `> *𝗣𝗢𝗪𝗘𝗥𝗗 𝗕𝗬 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷*`
+    );
 
   } catch (error) {
-    reply("❌ Error: " + error.message);
-    console.error("Upload Error:", error);
+    console.error(error);
+    await reply(`Error: ${error.message || error}`);
   }
 });
+
+// Helper function to format bytes
+function formatBytes(bytes) {
+  if (bytes === 0) return '0 Bytes';
+  const k = 1024;
+  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+}
