@@ -11,7 +11,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     try {
         if(!q) return reply("*_Please give me a text._*")
 
-        let logoMsg = `*𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 𝐋𝐎𝐆𝐎*
+        let logoMsg = `*𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 𝐋𝐎𝐆𝐎 🥷🇱🇰*
 
 *Text :* ${q}
 
@@ -39,11 +39,11 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 20 || Matrix
 
 
-> 🄿🄾🅆🄴🅁🄳 🅱🆈 𝐀𝐒𝐇𝐈𝐘𝐀_𝐌𝐃 😈`
+> 🄿🄾🅆🄴🅁🄳 🅱🆈 𝐀𝐒𝐇𝐈𝐘𝐀_𝐌𝐃 🥷🇱🇰`
 
         const fdChannel = {
             newsletterJid: "120363398661137791@newsletter",
-            newsletterName: "𝐀𝐒𝐇𝐈𝐘𝐀_𝐌𝐃",
+            newsletterName: "𝐀𝐒𝐇𝐈𝐘𝐀_𝐌𝐃 🥷",
             serverMessageId: 999
         };
         const contextMsg = {
@@ -184,7 +184,7 @@ const logo19 = `https://en.ephoto360.com/modern-gold-5-215.html`;
 const logo20 = `https://en.ephoto360.com/matrix-text-effect-154.html`;
 
 const apilink2 = 'https://api-pink-venom.vercel.app';
-const caption = `> 🄿🄾🅆🄴🅁🄳 🅱🆈 𝐀𝐒𝐇𝐈𝐘𝐀_𝐌𝐃 😈`;
+const caption = `> 🄿🄾🅆🄴🅁🄳 🅱🆈 𝐀𝐒𝐇𝐈𝐘𝐀_𝐌𝐃 🥷🇱🇰`;
 
 
 
