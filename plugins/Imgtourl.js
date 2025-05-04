@@ -65,7 +65,7 @@ cmd({
       `*${mediaType} Uploaded Successfully*\n\n` +
       `*Size:* ${formatBytes(mediaBuffer.length)}\n` +
       `*URL:* ${mediaUrl}\n\n` +
-      `> *𝗣𝗢𝗪𝗘𝗥𝗗 𝗕𝗬 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷*`
+      `> 𝗣𝗢𝗪𝗘𝗥𝗗 𝗕𝗬 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🥷`
     );
 
   } catch (error) {
