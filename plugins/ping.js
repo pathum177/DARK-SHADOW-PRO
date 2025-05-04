@@ -21,7 +21,7 @@ await conn.sendMessage(from, { text : 'Ping..50%' , edit : ping.key })
 await conn.sendMessage(from, { text : 'Ping..80%' , edit : ping.key })
 await conn.sendMessage(from, { text : 'Ping..100%' , edit : ping.key })
 
-return await conn.sendMessage(from, { text : '❗ > *Pong ' + (𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃) + ' Ms 🥷🍷* ' , edit : ping.key })
+return await conn.sendMessage(from, { text : '❗ *Pong ' + (final - inital) + ' Ms 🥷🍷* ' , edit : ping.key })
 } catch (e) {
 reply('*Error !!*')
 l(e)
