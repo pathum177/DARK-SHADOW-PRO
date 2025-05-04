@@ -17,7 +17,7 @@ cmd({
     const { data } = await axios.get(apiUrl);
     
     if (data.status && data.imgUrl) {
-      const caption = `🌌 *Random Wallpaper: ${query}*\n\n> *© 🄿🄾🅆🄴🅁🄳 🅱🆈  😈 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃;
+      const caption = `🌌 *Random Wallpaper: ${query}*\n\n> © 🄿🄾🅆🄴🅁🄳 🅱🆈  😈 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃*;
 *`;
       await conn.sendMessage(from, { image: { url: data.imgUrl }, caption }, { quoted: m });
     } else {
