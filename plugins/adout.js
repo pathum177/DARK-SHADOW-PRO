@@ -31,7 +31,7 @@ let desc = `
 
 > *㋡ 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 🍷🥷*
 `
-return await conn.sendMessage(from,{image: {url: `https://files.catbox.moe/bsopvu.jpg`},caption: desc},{quoted: mek})
+return await conn.sendMessage(from,{image: {url: `https://files.catbox.moe/5mr13a.jpg`},caption: desc},{quoted: mek})
 }catch(e){
 console.log(e)
 reply(`${e}`)
