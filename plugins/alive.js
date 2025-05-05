@@ -13,23 +13,24 @@ cmd({
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
         // Generate system status message
-        const status = `╭━━〔 *Ashiya_MD* 〕━━┈⊷
+        const status = `╭━━〔 *DARK-SHADOW-MD* 〕━━┈⊷
 ┃✯╭─────────────·๏
-┃✯┃• *👋Hi*: ${pushname} 《Im alive n¤w》 
+┃✯┃• *👋Hi*: ${pushname} 《Im alive now》 
 ┃✯┃• *⏳Uptime*:  ${runtime(process.uptime())} 
 ┃✯┃• *📟 Ram*: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
-┃✯┃• *👨‍💻 Owner*:Chethiya 
+┃✯┃• *👨‍💻 Owner*:Pathum Malsara 
 ┃✯└───────────┈⊷
 ╰──────────────┈⊷
-  *𝐀𝐒𝐇𝐈𝐘𝐀_𝐌𝐃 Multidevice Whatsapp Bot.*
+  *DARK SHADOW Multidevice Whatsapp Bot.*
 
 > *👾 : 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 𝐂𝐇𝐀𝐍𝐍𝐄𝐋*
 *╭┈───────────╴╴╴•⟢*
-*|https://whatsapp.com/channel/0029VbACpjVGJP8Pvuy1nC3T*
+*|https://whatsapp.com/channel/0029Vb7bwXEEAKWNJgBICJ0w
+*
 *╰┈───────────╴╴╴•⟢*
 > *👾 : 𝐂𝐎𝐍𝐓𝐀𝐂𝐓*
 *╭┈───────────╴╴╴•⟢*
-*│wa.me/94760746437*
+*│wa.me/94773416478*
 *╰┈───────────╴╴╴•⟢*
 > 👾 : Official Website 
  ╭┈───────────╴╴╴•⟢*
@@ -39,22 +40,22 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 *╭┈───────────╴╴╴•⟢*
 *│*???????????????????*
 *╰┈───────────╴╴╴•⟢*
-> *𝗣𝗼𝘄𝗲𝗿𝗱 𝗯𝘆 𝐀𝐘𝐄𝐒𝐇 🥷🇱🇰*
+> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀʀᴋ ꜱʜᴀᴅᴏᴡ*
 
 
 `;
 
         // Send the status message with an image
         await conn.sendMessage(from, { 
-            image: { url: `https://files.catbox.moe/iohaf4.jpg` },  // Image URL
+            image: { url: `https://telegra.ph/file/1ece2e0281513c05d20ee.jpg` },  // Image URL
             caption: status,
             contextInfo: {
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363398661137791@newsletter',
-                    newsletterName: 'Ashiya_MD',
+                    newsletterJid: '120363409414874042@newsletter',
+                    newsletterName: 'DARK SHADOW',
                     serverMessageId: 143
                 }
             }
