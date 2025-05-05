@@ -30,7 +30,7 @@ const axios = require('axios')
 const { File } = require('megajs')
 const prefix = '.'
 
-const ownerNumber = ['94760746437']
+const ownerNumber = ['94773416478']
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
@@ -326,7 +326,7 @@ await conn.sendMessage(from, { delete: mek.key })
 await conn.groupParticipantsUpdate(from,[sender], 'remove')
   }}
     if ( mek.id.startsWith("QUEENAMDI") ) {
-await conn.sendMessage(from, { text: "*Another Bot's message Detected*\n❗*Removed By 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃* ❗\nAnti Bot System on..." })
+await conn.sendMessage(from, { text: "*Another Bot's message Detected*\n❗*Removed By DARK SHADOW* ❗\nAnti Bot System on..." })
 if ( config.ANTI_BOT == "true" && isBotAdmins ) {
 await conn.sendMessage(from, { delete: mek.key })
 await conn.groupParticipantsUpdate(from,[sender], 'remove')
@@ -413,7 +413,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 })
 }
 app.get("/", (req, res) => {
-res.send(DARK-SHADOW) Bot,started✅");
+res.send(DARK-SHADOW Bot,started✅");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
