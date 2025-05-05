@@ -14,12 +14,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
     try {
         // Generate system status message
         const status = `╭━━〔 *Ashiya_MD* 〕━━┈⊷
-┃◈╭─────────────·๏
-┃◈┃• *👋Hi*: ${pushname} 《Im alive n¤w》 
-┃◈┃• *⏳Uptime*:  ${runtime(process.uptime())} 
-┃◈┃• *📟 Ram*: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
-┃◈┃• *👨‍💻 Owner*:Chethiya 
-┃◈└───────────┈⊷
+┃✯╭─────────────·๏
+┃✯┃• *👋Hi*: ${pushname} 《Im alive n¤w》 
+┃✯┃• *⏳Uptime*:  ${runtime(process.uptime())} 
+┃✯┃• *📟 Ram*: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
+┃✯┃• *👨‍💻 Owner*:Chethiya 
+┃✯└───────────┈⊷
 ╰──────────────┈⊷
   *𝐀𝐒𝐇𝐈𝐘𝐀_𝐌𝐃 Multidevice Whatsapp Bot.*
 
