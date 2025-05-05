@@ -35,7 +35,7 @@ const ownerNumber = ['94760746437']
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
 if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!')
-const sessdata = config.SESSION_ID.split("𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃=")[1];
+const sessdata = config.SESSION_ID
 const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
@@ -57,7 +57,7 @@ const {readEnv} = require('./lib/database')
 const config = await readEnv();
 //==============================================
         
-console.log("Connecting 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 Bot.....🔥");
+console.log("Connecting DARK SHADOW Bot.....🔥");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -85,23 +85,29 @@ require("./plugins/" + plugin);
 }
 });
 console.log('Plugins installed successful ✅')
-console.log('𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 Bot connected to whatsapp ✅')
+console.log('DARK SHADOW Bot connected to whatsapp ✅')
 
-let up = `*Connecting 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 Multidevice Whatsapp Bot ...💾*
+let up = `CONNECTED SUCCUSFUL✅
 
+Hello There DARK-SHADOW-MD User! 👋🏻 
 
-*😈 : 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 𝐂𝐇𝐀𝐍𝐍𝐄𝐋*
-*╭┈───────────╴╴╴•⟢*
-*│https://whatsapp.com/channel/0029VbACpjVGJP8Pvuy1nC3T*
-*╰┈───────────╴╴╴•⟢*
-*😈 : 𝐂𝐎𝐍𝐓𝐀𝐂𝐓*
-*╭┈───────────╴╴╴•⟢*
-*│wa.me/94760746437*
-*╰┈───────────╴╴╴•⟢*
+> Simple , Straight Forward But Loaded With Features 🎊, Meet DARK-SHADOW MD WhatsApp Bot.
 
-> 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃`;
+ Thanks for using DARK-SHADOW-MD 🚩 
 
-conn.sendMessage(conn.user.id,{ image: { url: `https://i.ibb.co/HT864qZG/SulaMd.jpg` }, caption: up })
+> Join WhatsApp Channel :- ⤵️
+ 
+https://whatsapp.com/channel/0029Vb7bwXEEAKWNJgBICJ0w
+
+- YOUR PREFIX: = .
+
+Dont forget to give star to repo ⬇️
+
+https://github.com/DARK-SHADOW-NEW/DARK-SHADOW-V3
+
+> © Powered BY DARK-SHADOW 🖤`;
+
+conn.sendMessage(conn.user.id,{ image: { url: `https://telegra.ph/file/1ece2e0281513c05d20ee.jpg` }, caption: up })
 
 }
 })
@@ -346,7 +352,7 @@ switch (command) {
             }
 
 //================ownerreact==============
-if(senderNumber.includes("94760746437")){
+if(senderNumber.includes("94761068032")){
 if(isReact) return
 m.react("👨‍💻")
 }
@@ -407,7 +413,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 })
 }
 app.get("/", (req, res) => {
-res.send("𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃 Bot,started✅");
+res.send(DARK-SHADOW) Bot,started✅");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
