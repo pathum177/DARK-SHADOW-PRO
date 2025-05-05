@@ -53,7 +53,7 @@ try{
       newsletterJid: '120363398661137791@newsletter',
       newsletterName: '𝐀𝐒𝐇𝐈𝐘𝐀_𝐌𝐃',
       serverMessageId: 999,
-        thumbnailUrl: "https://files.catbox.moe/553zxh.jpg",
+        thumbnailUrl: "https://files.catbox.moe/nhatkb.jpg",
         renderLargerThumbnail: true,
         showAdAttribution: true
     }
