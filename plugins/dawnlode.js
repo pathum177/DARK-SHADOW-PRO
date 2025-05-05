@@ -29,7 +29,7 @@ cmd({
             return reply("Failed to fetch the video. Please try again later.");
         }
         
-        let ytmsg = `╭━━━〔 *𝐀𝐒𝐇𝐈𝐘𝐀-MD* 〕━━━┈⊷
+        let ytmsg = `╭━━━〔 *DARK SHADOW YT DOWNLOADER* 〕━━━┈⊷
 ┇๏ *Title* -  ${yts.title}
 ┇๏ *Duration* - ${yts.timestamp}
 ┇๏ *Views* -  ${yts.views}
@@ -37,7 +37,7 @@ cmd({
 ┇๏ *Link* -  ${yts.url}
 ╰────────────────┈⊷
 
-> 𝐀𝐒𝐇𝐈𝐘𝐀-MD`;
+> DARK SHADOW -MD`;
 
         // Send video details
         await conn.sendMessage(from, { image: { url: data.result.thumbnail || '' }, caption: ytmsg }, { quoted: mek });
@@ -50,7 +50,7 @@ cmd({
             document: { url: data.result.download_url }, 
             mimetype: "video/mp4", 
             fileName: `${data.result.title}.mp4`, 
-            caption: `> *${yts.title}*\n> 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃`
+            caption: `> *${yts.title}*\n> DARK SHADOW `
         }, { quoted: mek });
 
     } catch (e) {
@@ -86,7 +86,7 @@ const yt = await ytsearch(q);
         return reply("Failed to fetch the audio. Please try again later.");
     }
     
-    let ytmsg = `╭━━━〔 *𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃* 〕━━━┈⊷
+    let ytmsg = `╭━━━〔 *DARK SHADOW YT DOWNLOADER* 〕━━━┈⊷
 ┇๏ *Tital* -  ${yts.title}
 ┇๏ *Duration* - ${yts.timestamp}
 ┇๏ *Views* -  ${yts.views}
@@ -94,7 +94,7 @@ const yt = await ytsearch(q);
 ┇๏ *Link* -  ${yts.url}
 ╰────────────────┈⊷
 
-> 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃`;
+> DARK SHADOW`;
 
 
 
@@ -109,7 +109,7 @@ const yt = await ytsearch(q);
         document: { url: data.result.downloadUrl }, 
         mimetype: "audio/mpeg", 
         fileName: `${data.result.title}.mp3`, 
-        caption: `> 𝐀𝐒𝐇𝐈𝐘𝐀-𝐌𝐃`
+        caption: `> DARK SHADOW`
     }, { quoted: mek });
 
 } catch (e) {
